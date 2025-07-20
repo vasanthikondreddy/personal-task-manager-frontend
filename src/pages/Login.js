@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post(`${BASE_URL}/user/login`, { username, password });
+      const res = await axios.post(`${BASE_URL}/auth/login`, { username, password });
       localStorage.setItem('token', res.data.token);
       navigate('/');
     } catch (err) {

@@ -20,7 +20,7 @@ const Register = () => {
     e.preventDefault();
     setError('');
     try {
-      const res = await axios.post(`${BASE_URL}/user/register`, form);
+      const res = await axios.post(`${BASE_URL}/auth/register`, form);
       localStorage.setItem('token', res.data.token);
       navigate('/');
     } catch (err) {
